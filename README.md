@@ -2,7 +2,7 @@
 A user guide for *ASFsimNZ.pub*: an R package for simulating ASF spread in New Zealand feral pigs.
 
 ## Introduction
-*ASFsimNZ* is an R package to simulate African swine fever (ASF) transmission in New Zealand feral pigs. Specifically, it is designed to (1) simulate the spread of ASF under different assumptions about the demography of the animals, and (2) examine the efficiency of different ASF control scenarios. The model was developed based on the contract between the Ministry for Primary Industries (MPI) and EpiCentre, Massey University (hereafter, we) for the project “Understanding the role of feral pigs in exotic disease incursion – African swine fever disease model development (Agreement number: C0033724)”.
+*ASFsimNZ.pub* is an R package to simulate African swine fever (ASF) transmission in New Zealand feral pigs. Specifically, it is designed to (1) simulate the spread of ASF under different assumptions about the demography of the animals, and (2) examine the efficiency of different ASF control scenarios.
 
 ## Model description
 To simulate the spread of ASF, we developed a stochastic grid-based simulation model. In the model, New Zealand is converted into a grid with each cell representing either;  
@@ -21,21 +21,21 @@ Given the uncertainty around the total population and average habitat size of fe
   
 ## Installation
 ### System requirement
-Considering the characteristic of stochastic models, it is recommended to iterate the simulation multiple times (e.g. 100 ~ 200 times at least). In order to maximise the efficiency of model running, we therefore designed *ASFsimNZ* to use multiple CPU threads (i.e. parallel computation). Using a modern desktop/laptop, it takes up to 200 megabytes of memory (i.e. ram) with the computation time of approximately one minute for a single iteration using a single CPU thread. Therefore, a system with **> 10 CPU threads** and **> 2 gigabytes of memory** is required to run the model 200 times within an acceptable computation time (i.e. 20 minutes or so).
+Considering the characteristic of stochastic models, it is recommended to iterate the simulation multiple times (e.g. 100 ~ 200 times at least). In order to maximise the efficiency of model running, we therefore designed *ASFsimNZ.pub* to use multiple CPU threads (i.e. parallel computation). Using a modern desktop/laptop, it takes up to 200 megabytes of memory (i.e. ram) with the computation time of approximately one minute for a single iteration using a single CPU thread. Therefore, a system with **> 10 CPU threads** and **> 2 gigabytes of memory** is required to run the model 200 times within an acceptable computation time (i.e. 20 minutes or so).
 
 ### Package install
-*ASFsimNZ* should be manually installed on your local machine. Before the installation, we recommend using RStudio to make the installation process easier. Also, your system may require 'Rtools' to install the package. For Windows users, Rtools can be downloaded from https://cran.r-project.org/bin/windows/Rtools/.  
+*ASFsimNZ.pub* should be manually installed on your local machine. Before the installation, we recommend using RStudio to make the installation process easier. Also, your system may require 'Rtools' to install the package. For Windows users, Rtools can be downloaded from https://cran.r-project.org/bin/windows/Rtools/.  
 Once your system is ready, the package can be installed as below;
 
 1. Open RStudio. On RStudio, choose "Package" tab on the mid-right section of the screen.
 2. Click "Install" button. It generates a pop-up menu "Install packages".
 3. On the pop-up menu, select "Package Archive File (.zip; .tar.gz)" option for "Install from:". This generates another pop-up screen to browse the package archive file. 
-4. Browse the package archive file. The file name should be like "ASFsimNZ_1.1.4.tar.gz". Please note that the version of the package (e.g. 1.1.4) would vary depending on the latest updates.
+4. Browse the package archive file. The file name should be like "ASFsimNZ.pub_1.1.4.tar.gz". Please note that the version of the package (e.g. 1.1.4) would vary depending on the latest updates.
 5. If the pop-up screen for browsing in step 3 is not appearing, you can manually navigate the file with "Browse..." button.
 6. Click the "Install" button.  
 
 ### Loading the package
-In order to run the simulation model and execute the function to export the model result, *ASFsimNZ* requires other packages below.
+In order to run the simulation model and execute the function to export the model result, *ASFsimNZ.pub* requires other packages below.
 ```{r, echo= T, eval= T, message= F}
 library(parallel)
 library(rgdal)
@@ -48,9 +48,10 @@ If missing, any packages can be installed with the code below.
 ```{r, echo= T, eval= F}
 install.packages("rgdal") # Install "rgdal" package
 ```
-Please make sure that all the packages above are installed and loaded on your system. Once the packages are loaded, your system is ready to load *ASFsimNZ*.
+Please make sure that all the packages above are installed and loaded on your system. Once the packages are loaded, your system is ready to load *ASFsimNZ.pub*.
 ```{r, echo= T, eval= F}
-library(ASFsimNZ)
+library(
+)
 ```
 
 ## Running the model
@@ -112,7 +113,7 @@ Result_map(res, 3, 16) # 120 weeks after the introduction
   
 ## ASF control
 ### Description
-In *ASFsimNZ*, four control scenarios can be examined. Each control scenario is a combination of different control measures (e.g. increasing passive surveillance, increasing carcass removal, increasing hunting pressure) on different control zones, including the infected, buffer, and surveillance zones. The infected zone is an area that immediately surrounds a habitat cell where an ASF infectious carcass is found via passive surveillance. The buffer and surveillance zones are the areas surrounding an infected and buffer zone, respectively. The radii for the infected, buffer, and surveillance zones are 4km, 8km, and 15km, respectively.  
+In *ASFsimNZ.pub*, four control scenarios can be examined. Each control scenario is a combination of different control measures (e.g. increasing passive surveillance, increasing carcass removal, increasing hunting pressure) on different control zones, including the infected, buffer, and surveillance zones. The infected zone is an area that immediately surrounds a habitat cell where an ASF infectious carcass is found via passive surveillance. The buffer and surveillance zones are the areas surrounding an infected and buffer zone, respectively. The radii for the infected, buffer, and surveillance zones are 4km, 8km, and 15km, respectively.  
   
 ### Control scenarios
 The control scenarios are;  
