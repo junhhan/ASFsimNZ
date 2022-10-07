@@ -1,19 +1,5 @@
----
-output: github_document
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  out.width = "100%"
-)
-```
-
-# ASFsimNZ
-A user guide for *ASFsimNZ*: an R package for simulating ASF spread in New Zealand feral pigs.
+# ASFsimNZ.pub
+A user guide for *ASFsimNZ.pub*: an R package for simulating ASF spread in New Zealand feral pigs.
 
 ## Introduction
 *ASFsimNZ* is an R package to simulate African swine fever (ASF) transmission in New Zealand feral pigs. Specifically, it is designed to (1) simulate the spread of ASF under different assumptions about the demography of the animals, and (2) examine the efficiency of different ASF control scenarios. The model was developed based on the contract between the Ministry for Primary Industries (MPI) and EpiCentre, Massey University (hereafter, we) for the project “Understanding the role of feral pigs in exotic disease incursion – African swine fever disease model development (Agreement number: C0033724)”.
