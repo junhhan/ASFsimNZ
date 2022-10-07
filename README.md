@@ -50,8 +50,7 @@ install.packages("rgdal") # Install "rgdal" package
 ```
 Please make sure that all the packages above are installed and loaded on your system. Once the packages are loaded, your system is ready to load *ASFsimNZ.pub*.
 ```{r, echo= T, eval= F}
-library(
-)
+library(ASFsimNZ.pub)
 ```
 
 ## Running the model
