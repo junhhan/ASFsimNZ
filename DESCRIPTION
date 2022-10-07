@@ -1,0 +1,15 @@
+Package: ASFsimNZ.pub
+Title: ASF simulation in New Zealand feral pigs
+Version: 1.1.4
+Authors@R: 
+    person("Jun-Hee", "Han", , "j.h.han@massey.ac.nz", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8923-1168"))
+Description: This package is to simulate the spread of African swine fever (ASF) in New Zealand feral pigs.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
